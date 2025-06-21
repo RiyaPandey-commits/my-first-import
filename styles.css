@@ -1,17 +1,35 @@
-* {
-  margin:0px;
-  padding:0px;
-}
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+body{
+   background-image: url("l.webp");
 }
-
-p {
+.b{
+    background-color: #EEAECA;
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    border-radius: 9px;
+    box-shadow: 6px 7px 10px black;
+}
+h2 {
+  font-family: "Edu SA Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
   display: block;
   width: 400px;
   margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  color: blue;
+}
+#octocat {
+  border-radius: 8px;
+  border-color: black; 
+  border: solid 5px; 
+  margin-left:380px;
+  display: block;
+  justify-content: center;
+  align-content: center; 
+  height:390px;
+  width:40%;
 }
