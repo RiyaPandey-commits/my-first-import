@@ -1,0 +1,9 @@
+# Log dosyaları
+*.log
+
+# Geçici dosyalar
+*.tmp
+
+# IDE ayar klasörleri
+.vscode/
+.idea/
