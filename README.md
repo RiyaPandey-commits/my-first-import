@@ -6,4 +6,18 @@ Creating a *fork* is producing a personal copy of someone else's project. Forks 
 
 After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
 
+**Quick Start to Forking**
+
+1) Fork this repo using the button (top right).
+
+2) Clone your fork:  
+   `git clone https://github.com/your-username/Spoon-Knife.git`
+
+3) Make changes, then:  
+   ```bash
+   git add .
+   git commit -m "My changes"
+   git push origin main
+
+
 For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
