@@ -27,7 +27,7 @@ button{
   padding: 10px 15px;
   background-color: rgb(0, 0, 0);
   border-radius: 9px;
-   font: 18px "Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font: 18px "Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
   color: rgb(255, 255, 255);
   border: 1px solid;
   cursor: pointer;

@@ -1,9 +1,40 @@
-### Well hello there!
+# 🥄 Fork-Spoon-Knife - Proyecto de Práctica
 
-This repository is meant to provide an example for *forking* a repository on GitHub.
+Este proyecto es una práctica de GitHub Forks, Pull Requests y contribuciones abiertas.
 
-Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
+Consiste en una simple página web con estilos personalizados que incluye:
 
-After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
+- Una imagen central (`forkit.gif`)
+- Un mensaje personalizado haciendo referencia a `@octocat`
+- Un botón interactivo (aunque sin funcionalidad aún)
+- Estilos oscuros con CSS minimalista
 
-For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+## 💻 ¿Qué contiene el código?
+
+### HTML
+Un archivo `index.html` que contiene:
+
+- Una imagen con el ID `#octocat`
+- Dos párrafos con mensajes personalizados
+- Un botón tipo "Click Me!"
+
+### CSS
+Un archivo `styles.css` con:
+
+- Fondo negro (`background-color: rgb(0,0,0)`)
+- Texto blanco con fuente `Courier New`
+- Estilo centrado para todos los elementos
+- Un botón con borde blanco y diseño limpio
+
+## ✍️ Cambios realizados en este fork
+
+- Personalización de los mensajes del sitio
+- Creación de estilos visuales oscuros
+- Añadido un botón de prueba con diseño minimalista
+
+## 🚀 ¿Cómo probarlo?
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/devloop307/Fork-Spoon-Knife.git
+   cd Fork-Spoon-Knife
