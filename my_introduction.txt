@@ -1,0 +1,2 @@
+Hello! My name is (あなたの名前). I am learning how to use Git and GitHub > my_introduction.txt
+
