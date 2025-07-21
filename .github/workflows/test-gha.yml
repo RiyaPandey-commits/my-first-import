@@ -1,8 +1,8 @@
 name: AutoUpdateCFN
 on:
   push:
-    # branches:
-      # - main
+    branches:
+      - main
     # paths:
     #   - './github/workflows/**'
 
@@ -24,6 +24,8 @@ jobs:
       - run: gh version
 
       - name: Push changes and raise PR
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config --global user.name "automation.kx"
           git config --global user.email "automation.kx@gmail.com"
