@@ -47,5 +47,5 @@ jobs:
           gh pr create \
             --head "${{ github.repository_owner }}:$FEATURE_BRANCH_NAME" \
             --base main \ 
-            --title "Automation: test"
+            --title "Automation: test" \
             --body "PR is to test sync fork repo in gha."
