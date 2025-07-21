@@ -29,6 +29,8 @@ jobs:
       
 
       - name: Push changes and raise PR
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "automation.kx"
           git config --global user.email "automation.kx@gmail.com"
@@ -36,7 +38,7 @@ jobs:
           # re-sync main from upstream
           git remote add upstream https://github.com/octocat/Spoon-Knife.git
           git fetch upstream main
-          git merge upstream/main --no-edit --allow-unrelated-histories
+          git merge upstream/main --allow-unrelated-histories
           git push origin main
 
           # create and switch to feature branch
@@ -44,20 +46,20 @@ jobs:
           git checkout -b "$FEATURE_BRANCH_NAME"
           git add .
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
-          git push --set-upstream origin $FEATURE_BRANCH_NAME
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} $FEATURE_BRANCH_NAME
 
-      - name: Raise PR
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
-        run: |
-          # create PR to upstream
-          UPSTEAM_REPO="octocat/Spoon-Knife"
-          # gh repo set-default "$UPSTEAM_REPO"
+      # - name: Raise PR
+      #   env:
+      #     GH_TOKEN: ${{ secrets.PAT }}
+      #   run: |
+      #     # create PR to upstream
+      #     UPSTEAM_REPO="octocat/Spoon-Knife"
+      #     # gh repo set-default "$UPSTEAM_REPO"
 
-          echo "${GH_TOKEN}" | gh auth login --with-token
-          gh pr create \
-            --repo $UPSTEAM_REPO \
-            --head kkkkxx:$FEATURE_BRANCH_NAME \
-            --base main \
-            --title "Automation: test" \
-            --body "PR is to test sync fork repo in gha."
+      #     echo "${GH_TOKEN}" | gh auth login --with-token
+      #     gh pr create \
+      #       --repo $UPSTEAM_REPO \
+      #       --head kkkkxx:$FEATURE_BRANCH_NAME \
+      #       --base main \
+      #       --title "Automation: test" \
+      #       --body "PR is to test sync fork repo in gha."
