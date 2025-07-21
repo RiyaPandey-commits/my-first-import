@@ -26,6 +26,7 @@ jobs:
         with:
           version: 2.24.3
       - run: gh version
+      
 
       - name: Push changes and raise PR
         env:
@@ -50,7 +51,8 @@ jobs:
           # create PR to upstream
           UPSTEAM_REPO="octocat/Spoon-Knife"
           # gh repo set-default "$UPSTEAM_REPO"
-          
+
+          echo "${{ secrets.PAT }}" | gh auth login --with-token
           gh pr create \
             --repo $UPSTEAM_REPO \
             --head kkkkxx:$FEATURE_BRANCH_NAME \
