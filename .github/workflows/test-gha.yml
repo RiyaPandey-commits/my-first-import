@@ -13,6 +13,7 @@ permissions:
 jobs:
   read-online-file:
     runs-on: ubuntu-latest
+    environment: nonprod
 
     steps:
       - name: checkout code
