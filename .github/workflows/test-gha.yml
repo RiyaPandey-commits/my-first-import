@@ -7,8 +7,10 @@ on:
     #   - './github/workflows/**'
 
 permissions:
-  pull-requests: write
+  id-token: read
   contents: read
+  actions: read
+  security-events: read
   
 jobs:
   read-online-file:
