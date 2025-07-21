@@ -20,6 +20,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 2
+          token: ${{ secrets.PAT }}
 
       - name: Set up github cli
         uses: ksivamuthu/actions-setup-gh-cli@v1
@@ -46,7 +47,8 @@ jobs:
           git checkout -b "$FEATURE_BRANCH_NAME"
           git add .
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
-          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} $FEATURE_BRANCH_NAME
+          # git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} $FEATURE_BRANCH_NAME
+          git push --set-upstream origin $FEATURE_BRANCH_NAME
 
       # - name: Raise PR
       #   env:
