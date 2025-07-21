@@ -6,6 +6,10 @@ on:
     # paths:
     #   - './github/workflows/**'
 
+permissions:
+  pull-requests: write
+  contents: read
+  
 jobs:
   read-online-file:
     runs-on: ubuntu-latest
