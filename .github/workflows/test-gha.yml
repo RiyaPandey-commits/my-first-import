@@ -23,9 +23,10 @@ jobs:
           fetch-depth: 2
 
       - name: Set up github cli
-        uses: ksivamuthu/actions-setup-gh-cli@v1
-        with:
-          version: 2.24.3
+        # uses: ksivamuthu/actions-setup-gh-cli@v1
+        # with:
+        #   version: 2.24.3
+        run: sudo apt-get install gh -y
       - run: gh version
       
 
