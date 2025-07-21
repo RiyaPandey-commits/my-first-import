@@ -18,9 +18,10 @@ jobs:
           fetch-depth: 2
 
       - name: Set up github cli
-        uses: actions/setup-cli@v1
+        uses: ksivamuthu/actions-setup-gh-cli@v1
         with:
-          version: latest
+          version: 2.24.3
+      - run: gh version
 
       - name: Push changes and raise PR
         run: |
