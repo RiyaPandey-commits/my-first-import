@@ -45,8 +45,10 @@ jobs:
 
           # create PR to upstream
           UPSTEAM_REPO="octocat/Spoon-Knife"
-          gh repo set-default "$UPSTEAM_REPO"
+          # gh repo set-default "$UPSTEAM_REPO"
+          
           gh pr create \
+            --repo $UPSTEAM_REPO \
             --head "${{ github.repository_owner }}:$FEATURE_BRANCH_NAME" \
             --base main \ 
             --title "Automation: test" \
