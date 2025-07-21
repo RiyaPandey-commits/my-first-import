@@ -46,7 +46,7 @@ jobs:
           git checkout -b "$FEATURE_BRANCH_NAME"
           git add .
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
-          git push https://${GHEC_TOKEN}@github.com/kkkkxx/Spoon-Knife-test.git $FEATURE_BRANCH_NAME
+          git push https://${GH_TOKEN}@github.com/kkkkxx/Spoon-Knife-test.git $FEATURE_BRANCH_NAME
           # git push --set-upstream origin $FEATURE_BRANCH_NAME
 
       # - name: Raise PR
