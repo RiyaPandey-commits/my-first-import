@@ -28,6 +28,9 @@ jobs:
         #   version: 2.24.3
         run: sudo apt-get install gh -y
       - run: gh version
+
+      - run: |
+          touch /test.txt
       
 
       - name: Push changes and raise PR
