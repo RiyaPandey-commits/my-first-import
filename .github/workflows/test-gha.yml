@@ -18,7 +18,9 @@ jobs:
           fetch-depth: 2
 
       - name: Set up github cli
-        uses: cli/cli-action@v2
+        uses: cli/cli@v2
+        with:
+          version: latest
 
       - name: Push changes and raise PR
         run: |
