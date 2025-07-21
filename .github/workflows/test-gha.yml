@@ -59,7 +59,7 @@ jobs:
           UPSTEAM_REPO="octocat/Spoon-Knife"
           # gh repo set-default "$UPSTEAM_REPO"
 
-          gh auth login
+          # gh auth login
           gh pr create \
             --repo $UPSTEAM_REPO \
             --head kkkkxx:$FEATURE_BRANCH_NAME \
