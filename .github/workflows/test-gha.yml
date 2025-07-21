@@ -30,7 +30,7 @@ jobs:
       - run: gh version
 
       - run: |
-          touch /test.txt
+          echo "balabalabala" > test.txt
       
 
       - name: Push changes and raise PR
@@ -49,7 +49,7 @@ jobs:
           # create and switch to feature branch
           FEATURE_BRANCH_NAME="automation/test-${{ github.run_id }}"
           git checkout -b "$FEATURE_BRANCH_NAME"
-          git add .
+          git add test.txt
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/kkkkxx/Spoon-Knife-test.git HEAD:$FEATURE_BRANCH_NAME
           # git push --set-upstream origin $FEATURE_BRANCH_NAME
