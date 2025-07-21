@@ -49,7 +49,7 @@ jobs:
           # create and switch to feature branch
           FEATURE_BRANCH_NAME="automation/test-${{ github.run_id }}"
           git checkout -b "$FEATURE_BRANCH_NAME"
-          git checkout main -- ./.github/workflows/
+          git rm .github/workflows/test-gha.yml
           git add ./test.txt
           git diff --cached --quiet HEAD || git commit -m "gha $(date +%F)"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/kkkkxx/Spoon-Knife-test.git HEAD:$FEATURE_BRANCH_NAME
