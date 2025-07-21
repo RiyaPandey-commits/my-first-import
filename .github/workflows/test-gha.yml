@@ -49,10 +49,10 @@ jobs:
           # create and switch to feature branch
           FEATURE_BRANCH_NAME="automation/test-${{ github.run_id }}"
           git checkout -b "$FEATURE_BRANCH_NAME"
-          git add test.txt
-          git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
+          git add ./test.txt
+          git diff --cached --quiet HEAD || git commit -m "gha $(date +%F)"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/kkkkxx/Spoon-Knife-test.git HEAD:$FEATURE_BRANCH_NAME
-          echo "feature_branch_name=$FEATURE_BRANCH_NAME" > $GITHUB_ENV
+          echo "feature_branch_name=$FEATURE_BRANCH_NAME" >> $GITHUB_ENV
           # git push --set-upstream origin $FEATURE_BRANCH_NAME
 
       - name: Raise PR
