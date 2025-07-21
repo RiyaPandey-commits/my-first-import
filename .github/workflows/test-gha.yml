@@ -29,7 +29,7 @@ jobs:
 
       - name: Push changes and raise PR
         env:
-          GH_TOKEN: ${{ secret.PAT }}
+          GH_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "automation.kx"
           git config --global user.email "automation.kx@gmail.com"
