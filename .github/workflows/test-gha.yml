@@ -29,8 +29,8 @@ jobs:
       
 
       - name: Push changes and raise PR
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
+        # env:
+        #   GH_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "automation.kx"
           git config --global user.email "automation.kx@gmail.com"
@@ -46,7 +46,7 @@ jobs:
           git checkout -b "$FEATURE_BRANCH_NAME"
           git add .
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
-          git push https://${GH_TOKEN}@github.com/kkkkxx/Spoon-Knife-test.git $FEATURE_BRANCH_NAME
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/kkkkxx/Spoon-Knife-test.git HEAD:$FEATURE_BRANCH_NAME
           # git push --set-upstream origin $FEATURE_BRANCH_NAME
 
       # - name: Raise PR
