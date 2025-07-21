@@ -29,8 +29,6 @@ jobs:
       
 
       - name: Push changes and raise PR
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
         run: |
           git config --global user.name "automation.kx"
           git config --global user.email "automation.kx@gmail.com"
@@ -48,6 +46,10 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "gha $(date +%F)"
           git push --set-upstream origin $FEATURE_BRANCH_NAME
 
+      - name: Raise PR
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: |
           # create PR to upstream
           UPSTEAM_REPO="octocat/Spoon-Knife"
           # gh repo set-default "$UPSTEAM_REPO"
