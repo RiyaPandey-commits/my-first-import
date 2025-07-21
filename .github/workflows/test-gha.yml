@@ -49,7 +49,7 @@ jobs:
           
           gh pr create \
             --repo $UPSTEAM_REPO \
-            --head "${{ github.repository_owner }}:$FEATURE_BRANCH_NAME" \
+            --head kkkkxx:$FEATURE_BRANCH_NAME \
             --base main \ 
             --title "Automation: test" \
             --body "PR is to test sync fork repo in gha."
