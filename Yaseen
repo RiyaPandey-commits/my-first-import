@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yaseen Roulette AI - Ultra Simple</title>
+<style>
+body{background:#0b0f17;color:#fff;font-family:Arial;padding:12px;font-size:16px}
+h1{color:#ffcc00;font-size:22px;margin:0 0 12px}
+textarea,button{width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #333;background:#1f2733;color:#fff;font-size:16px}
+#msg{color:#ff4d4d;margin-top:6px}
+ol{margin:10px 0 0 22px}
+</style></head>
+<body>
+<h1>🎯 Yaseen Roulette AI - Ultra Simple</h1>
+<p>اكتب/الصق الأرقام (مفصولة بمسافة أو فاصلة):</p>
+<textarea id="nums" rows="3" placeholder="12 18 17 4 19 0 1 6 31"></textarea>
+<button id="btn">Predict</button>
+<div id="msg"></div>
+<div id="out"></div>
+
+<script>
+const WHEEL = [0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
+document.getElementById('btn').addEventListener('click', predict);
+
+function predict(){ 
+  try {
+    const raw = document.getElementById('nums').value.trim();
+    const nums = raw.split(/[^0-9]+/).map(n=>parseInt(n)).filter(n=>!isNaN(n)&&n>=0&&n<=36);
+    const msg = document.getElementById('msg');
+    const out = document.getElementById('out');
+    if(nums.length < 5){ msg.textContent = 'أدخل 5 أرقام على الأقل.'; out.innerHTML=''; return; }
+    msg.textContent = '';
+    const probs = calc(nums);
+    const arr = probs.map((p,i)=>({n:i,p})).sort((a,b)=>b.p-a.p);
+    let html = '<h3>Top 3</h3><ol>';
+    for(let i=0;i<3;i++) html += `<li>#${arr[i].n} ~ ${(arr[i].p*100).toFixed(2)}%</li>`;
+    html += '</ol><p style="color:#888;font-size:13px">* احتمالات تقريبية، ليست ضمان ربح.</p>';
+    out.innerHTML = html;
+  } catch(e){
+    document.getElementById('msg').textContent = 'Error: '+e;
+    console.error(e);
+  }
+}
+
+function calc(nums){
+  const len=nums.length;
+  const freq=new Array(37).fill(0);
+  nums.forEach((n,i)=>{
+    const w=Math.exp((i+1)/len); // وزن للأحدث
+    freq[n]+=w;
+  });
+  const smooth=new Array(37).fill(0);
+  const a=0.6;
+  for(let i=0;i<WHEEL.length;i++){
+    const n=WHEEL[i], l=WHEEL[(i-1+WHEEL.length)%WHEEL.length], r=WHEEL[(i+1)%WHEEL.length];
+    smooth[n]+=freq[n]*(1-a) + (freq[l]+freq[r])*(a/2);
+  }
+  const s=smooth.reduce((x,y)=>x+y,0);
+  return smooth.map(v=>v/s);
+}
+</script>
+</body></html>
