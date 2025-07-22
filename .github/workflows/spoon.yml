@@ -1,0 +1,22 @@
+name: practise
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+jobs:
+  test-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Say Hello
+      run: echo "Hello, ${{github.actor}}! THIS IS YOUR FIRST GITHUB ACTION"
+
+    - name: show current directory
+      run: pwd
+
+    - name: list all files
+      run: ls -la   
