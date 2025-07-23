@@ -3,15 +3,78 @@
   padding:0px;
 }
 
+body {
+  /* The whole page will flash red in panic */
+  animation: panic 0.5s 1.5s forwards;
+  overflow: hidden; /* Prevents scrollbars during the shake */
+}
+
 #octocat {
   display: block;
-  width:384px;
+  width:50px;
   margin: 50px auto;
+  position: relative; /* Required for animation */
+  z-index: 10; /*The octocat is on top of everything */
+  
+  /* Animation: 'lunge' runs for 1s, waits 1s, and stays at its final position */
+  animation: lunge 1s ease-in 1s forwards;
 }
 
 p {
   display: block;
-  width: 400px;
+  width: 600px;
   margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font: 30px "Comic Sans MS", cursive; /* The font of champions */
+  
+  /* Animation: 'shake' starts after the lunge hits and runs 4 times */
+  animation: shake 0.2s linear 2s 4;
+}
+
+#final-message {
+    font: 100px "Comic Sans MS", cursive;
+    color: #ff0000;
+    text-shadow: 3px 3px 0 #000;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hidden by default */
+
+    /* Animation: Appears after everything else is done */
+    animation: game-over 1s ease-out 3.5s forwards;
+}
+
+
+/* The fork lunges down and to the right */
+@keyframes lunge {
+  100% {
+    transform: translateY(100px) rotate(45deg);
+  }
+}
+
+/* The text shakes in terror */
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-15px) rotate(-3deg); }
+  75%  { transform: translateX(15px) rotate(3deg); }
+  100% { transform: translateX(0); }
+}
+
+/* The background flashes red */
+@keyframes panic {
+    to { background-color: #4d0000; }
+}
+
+/* The final message appears with style */
+@keyframes game-over {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.1) rotate(-360deg);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
 }
