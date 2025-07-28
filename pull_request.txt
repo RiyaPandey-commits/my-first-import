@@ -1,0 +1,1 @@
+C'est vraiment pas top de faire ça dans le main et de le pull request en suivant. Même si la pull request ne peut pas etre acceptee pour l'exemple, au moins j'aurai fait l'exercice.
