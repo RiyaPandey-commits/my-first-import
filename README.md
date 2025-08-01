@@ -10,9 +10,7 @@ For some more information on how to fork a repository, [check out our guide, "Fo
 
 
 
-\## Contributing
+## Contributing
 
-
-
-This is a practice fork. Learning Git is fun!
-
+This is a practice fork. Learning Git is fun!  
+[See contributing guide](https://github.com/octocat/Spoon-Knife/blob/main/CONTRIBUTING.md)
