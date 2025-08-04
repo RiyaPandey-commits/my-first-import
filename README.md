@@ -10,3 +10,6 @@ For some more information on how to fork a repository, [check out our guide, "Fo
 ## Это мой форк Spoon-Knife для тренировки Github
 ## Это мой форк Spoon-Knife для тренировки GitHub
 git checkout -b my-update-branch
+## Traducción al Español
+
+Este proyecto es una prueba de cómo funcionan los forks en GitHub.
