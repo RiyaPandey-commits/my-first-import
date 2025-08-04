@@ -1,1 +1,1 @@
-Dies ist ein Test für Git.
+Dies ist ein Test für Git. Test mit Terminal.
