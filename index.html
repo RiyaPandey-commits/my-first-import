@@ -4,17 +4,73 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', Arial, sans-serif;
+    }
+    .container {
+      background: rgba(255,255,255,0.85);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(60,60,60,0.15);
+      padding: 40px 32px;
+      text-align: center;
+      max-width: 350px;
+    }
+    .emoji {
+      font-size: 64px;
+      margin-bottom: 16px;
+      animation: pop 1.2s infinite alternate;
+    }
+    @keyframes pop {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.12);}
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #43c6ac;
+      margin: 0 0 12px 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #444;
+      font-size: 1.1em;
+      margin: 0 0 12px 0;
+    }
+    .fork {
+      font-size: 2em;
+      color: #f7971e;
+      margin-bottom: 10px;
+    }
+    .footer {
+      margin-top: 24px;
+      font-size: 0.95em;
+      color: #888;
+    }
+  </style>
+   <script src="script.js"></script>
 </head>
 
 <body>
-
-<img src="forkit.gif" id="octocat" alt="" />
-
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
-
+  <div class="container">
+    <div class="emoji">🍴✨</div>
+    <h1>Forked with Love!</h1>
+    <div class="fork">🥄 + 🔪 = ❤️</div>
+    <p>
+      Yay! I managed to <strong>fork</strong> this repo.<br>
+      Let the coding adventure begin!
+    </p>
+    <div class="footer">
+      Made by a happy forker 😊 @octocat!
+    </div>
+  </div>
 </body>
 </html>
