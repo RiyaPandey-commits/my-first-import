@@ -7,6 +7,7 @@ function getRandomGreeting() {
 		"Howdy!",
 		"Welcome!",
 		"Good day!"
+        "Salutations!",
 	];
 	const index = Math.floor(Math.random() * greetings.length);
 	return greetings[index];
