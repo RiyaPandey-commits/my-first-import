@@ -1,0 +1,10 @@
+cat > CONTRIBUTING.md <<'EOF'
+# Contributing Guidelines
+
+Thanks for your interest! To keep things smooth, please follow these steps.
+
+## Getting Started
+1. Fork this repository and clone your fork.
+2. Create a feature branch from `main`:
+   ```bash
+   git checkout -b feature/<short-topic>
