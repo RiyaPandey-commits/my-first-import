@@ -1,0 +1,49 @@
+cat > simple-interest.sh <<'EOF'
+#!/usr/bin/env bash
+# simple-interest.sh
+# Compute Simple Interest: SI = (P * R * T) / 100
+# Usage:
+#   ./simple-interest.sh P R T
+#   ./simple-interest.sh        # prompts interactively
+
+set -euo pipefail
+
+read_val() {
+  local prompt="$1" var
+  while true; do
+    read -r -p "$prompt" var
+    if [[ -z "${var// }" ]]; then
+      echo "Value cannot be empty."
+    elif ! printf '%s' "$var" | grep -Eq '^[0-9]+([.][0-9]+)?$'; then
+      echo "Please enter a valid number (e.g., 10000 or 7.5)."
+    else
+      printf '%s' "$var"
+      return 0
+    fi
+  done
+}
+
+P="${1-}"; R="${2-}"; T="${3-}"
+
+if [[ -z "$P" || -z "$R" || -z "$T" ]]; then
+  echo "Simple Interest Calculator"
+  echo "--------------------------"
+  P="$(read_val 'Principal (P): ')"
+  echo
+  R="$(read_val 'Rate in % per annum (R): ')"
+  echo
+  T="$(read_val 'Time in years (T): ')"
+  echo
+fi
+
+# Calculate using bc for decimal support
+SI=$(echo "scale=2; ($P * $R * $T) / 100" | bc -l)
+TOTAL=$(echo "scale=2; $P + $SI" | bc -l)
+
+printf "Simple Interest = %0.2f\n" "$SI"
+printf "Total Amount    = %0.2f\n" "$TOTAL"
+EOF
+
+chmod +x simple-interest.sh
+git add simple-interest.sh
+git commit -m "feat: add simple-interest.sh with CLI and interactive modes"
