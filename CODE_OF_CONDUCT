@@ -1,0 +1,40 @@
+
+---
+
+## 5) Add CODE_OF_CONDUCT  ✅ (Task 4)
+(Original, concise code of conduct you can safely include.)
+
+```bash
+cat > CODE_OF_CONDUCT <<'EOF'
+# Code of Conduct
+
+We are committed to a welcoming and inclusive community.
+
+## Our Pledge
+We pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+## Our Standards
+Examples of behavior that contributes to a positive environment include:
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
+
+Unacceptable behavior includes:
+- Insults, trolling, or personal attacks
+- Harassment or discrimination
+- Publishing others’ private information
+- Other conduct which could reasonably be considered inappropriate
+
+## Enforcement
+Report violations by opening a confidential issue or contacting the maintainers at: <maintainer-email@example.com>.  
+Maintainers will review and respond in good faith. Persistent harmful behavior may result in temporary or permanent restrictions.
+
+## Scope
+This Code applies within project spaces and when representing the project in public spaces.
+
+EOF
+
+git add CODE_OF_CONDUCT
+git commit -m "docs: add CODE_OF_CONDUCT"
