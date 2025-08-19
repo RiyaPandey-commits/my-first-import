@@ -1,9 +1,14 @@
-### Well hello there!
+# Experiment 5: Forking, Cloning, and Pull Requests  
 
-This repository is meant to provide an example for *forking* a repository on GitHub.
+This repository is used to demonstrate **GitHub workflow basics**: forking, cloning, making changes, pushing, and creating a pull request.  
 
-Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
+## Steps Performed  
 
-After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
+### 1. Forking a Repository  
+- Forked the public repository `octocat/Spoon-Knife` on GitHub.  
+- Now the fork is available under my account (`prati-1011/Spoon-Knife`).  
 
-For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+### 2. Cloning the Fork  
+- Cloned the fork to my local machine using:  
+  ```bash
+  git clone https://github.com/prati-1011/Spoon-Knife.git
