@@ -2,8 +2,17 @@
 
 <html>
 <head>
+  <style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+ 
+}
+</style>
+
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
+  <title>Spoon-Fork</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -12,9 +21,26 @@
 <img src="forkit.gif" id="octocat" alt="" />
 
 <!-- Feel free to change this text here -->
+ <h3 class="city">Super Fork Festival!</h3>
 <p>
-  Fork me? Fork you, @octocat!
+  Knife me? Knife you, @rodrigoschug!
 </p>
 
+<input className="flex y justify-items-center"
+type="text"
+placeholder="Put your Fork here!"
+/>
+<div class="container">
+  <div class="element-on-top">
+<label for="silver-select">Choose a Team!</label>
+</div>
+<div class="element-behind">
+<select name="silver" id="silver-select">
+<option value="tfork">"Team Fork"</option>
+<option value="tknife">"Team Knife"</option>
+<option value="tspoon">"Team Spoon"</option>
+</select>
+</div>
+</div>
 </body>
 </html>
