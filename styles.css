@@ -13,5 +13,31 @@ p {
   display: block;
   width: 400px;
   margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font: 30px Helvetica,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
+
+h3 {
+ display: block;
+  width: 400px;
+  margin: 50px auto;
+  font: 30px Helvetica,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+label {
+  display: block;
+  width: 175px;
+  margin: 50px auto;
+}
+
+select {
+  display: block;
+  width: 225px;
+  margin: 50px auto;
+}
+
+input {
+  display: block;
+  width: 225px;
+  margin: 50px auto;
+}
+
