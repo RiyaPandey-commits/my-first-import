@@ -1,0 +1,40 @@
+.movie-card{
+    border: 1px solid rgb(75, 82, 92);
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-poster{
+    padding: 0px 5em 15em 5em;
+    position: relative;
+    /* padding-bottom: 10em; */
+}
+
+.movie-poster img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-overlay{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.favorite-btn{
+    background: none;
+    border: none;
+}
+
+.movie-info{
+    background-color: rgb(178, 177, 179);
+    overflow: hidden;
+    padding: 4px 10px;
+}
+
+.movie-info p{
+    font-size: 15px;
+}
