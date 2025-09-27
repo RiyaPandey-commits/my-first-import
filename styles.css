@@ -1,17 +1,23 @@
-* {
-  margin:0px;
-  padding:0px;
-}
-
 #octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+    display: block;
+    width:384px;
+    margin: 10px auto 0 auto;
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+#num1 {
+    margin: 40px auto 0 auto;
+    font: 30px Monaco;
+    text-align: center;
+}
+
+#num2 {
+    margin: 0 auto 0 auto;
+    font: 30px Monaco;
+    color: rgba(0, 89, 255, 0.2);
+    text-align: center;
+}
+
+#num2 a {
+    text-decoration: none;
+    color: inherit;
 }
