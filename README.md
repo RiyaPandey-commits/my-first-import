@@ -1,4 +1,4 @@
-### Well hello there!
+### Well hello there! (EN)
 
 This repository is meant to provide an example for *forking* a repository on GitHub.
 
@@ -7,3 +7,12 @@ Creating a *fork* is producing a personal copy of someone else's project. Forks 
 After forking this repository, you can make some changes to the project, and submit [a Pull Request](https://github.com/octocat/Spoon-Knife/pulls) as practice.
 
 For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
+
+### Pozdravljeni! (SLO)
+
+Ta repozitorij je namenjen za prikazovanje "forking-a" na GitHub.
+
+Ko ustvariš fork, v bistvu kloniraš projekt od nekoga drugega. Ta fork služi kot povezava med lokalno kopijo projekta in orginalnim projektom. Lahko objaviš "Pull request", ki predstavi spremembe, ki si jih opravil na projektu in tako le-tega izboljšaš. To je bistvo sodelovalnega dela na GitHub-u.
+
+
+Za več informacij o forking-u obišči: http://guides.github.com/overviews/forking/ Hvala lepa za pozornost! :sparkling_heart:
