@@ -1,1 +1,1 @@
-this is my first fork change
+this is my first fork change here  i have come to track the chnges brtween the twop files one in the working area  and anotrher in staging area ....one imporftant pointy to note that any file whicvh have been stagged previously also even changes in thoise if done in worjking area will be visibkle herer
