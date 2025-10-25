@@ -27,7 +27,7 @@ class Review(Base):
     sentiment_score = Column(Float)
     sentiment_classification = Column(String(20))
     collected_at = Column(DateTime, default=datetime.now)
-    metadata = Column(JSON)
+    extra_data = Column(JSON)
 
 
 class Analysis(Base):
@@ -70,7 +70,7 @@ class DatabaseManager:
                     rating=review_data.get('rating', 0),
                     author=review_data.get('user') or review_data.get('author', 'Anonymous'),
                     date=datetime.fromisoformat(review_data.get('date', datetime.now().isoformat()).replace('Z', '+00:00')) if review_data.get('date') else datetime.now(),
-                    metadata=review_data
+                    extra_data=review_data
                 )
                 self.session.add(review)
 
