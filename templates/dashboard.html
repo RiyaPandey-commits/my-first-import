@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Perception Research Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Company Perception Research Dashboard</h1>
+            <p class="subtitle">AI-Powered Customer Perception Analysis</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" placeholder="Enter company name">
+            </div>
+            <div class="control-group">
+                <label for="research-depth">Research Depth:</label>
+                <select id="research-depth">
+                    <option value="quick">Quick (Fast Overview)</option>
+                    <option value="standard" selected>Standard (Balanced)</option>
+                    <option value="deep">Deep (Comprehensive)</option>
+                </select>
+            </div>
+            <button id="start-research" class="btn-primary">Start Research</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing customer perceptions across all platforms...</p>
+        </div>
+
+        <div id="results" class="results" style="display: none;">
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Reviews</h3>
+                    <p class="stat-number" id="total-reviews">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sentiment Score</h3>
+                    <p class="stat-number" id="sentiment-score">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sources Analyzed</h3>
+                    <p class="stat-number" id="sources-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Risk Level</h3>
+                    <p class="stat-number" id="risk-level">Low</p>
+                </div>
+            </div>
+
+            <!-- Sentiment Distribution Chart -->
+            <div class="chart-container">
+                <h2>Sentiment Distribution</h2>
+                <canvas id="sentiment-chart"></canvas>
+            </div>
+
+            <!-- Platform Breakdown -->
+            <div class="chart-container">
+                <h2>Reviews by Platform</h2>
+                <canvas id="platform-chart"></canvas>
+            </div>
+
+            <!-- AI Insights -->
+            <div class="insights-section">
+                <h2>AI-Generated Insights</h2>
+                <div id="ai-insights"></div>
+            </div>
+
+            <!-- Critical Issues -->
+            <div class="issues-section">
+                <h2>Critical Issues</h2>
+                <div id="critical-issues"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recommendations-section">
+                <h2>Recommendations</h2>
+                <div id="recommendations"></div>
+            </div>
+
+            <!-- Recent Reviews -->
+            <div class="reviews-section">
+                <h2>Recent Feedback</h2>
+                <div id="recent-reviews"></div>
+            </div>
+
+            <!-- Generated Responses -->
+            <div class="responses-section">
+                <h2>AI-Generated Responses</h2>
+                <div id="generated-responses"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
