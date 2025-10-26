@@ -1,5 +1,18 @@
 ### Well hello there!
 
+## How to Contribute
+
+1. Fork the repository
+2. Clone the repository to your local machine
+3. Create a new branch
+4. Make your changes
+5. Commit your changes with a descriptive message
+6. Push your changes to your fork
+7. Open a pull request to the main repository
+
+Happy coding!
+
+
 This repository is meant to provide an example for *forking* a repository on GitHub.
 
 Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
