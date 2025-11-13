@@ -1,20 +1,118 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <style>
+    /* Internal styles for demonstration */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f0f0, #d0e0f0);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
+    header {
+      background-color: #24292e;
+      color: #fff;
+      padding: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    #octocat {
+      width: 200px;
+      margin: 2em auto;
+      display: block;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #24292e;
+      color: #fff;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: #fff;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
 <body>
 
-<img src="forkit.gif" id="octocat" alt="" />
+<header>
+  <h1>Spoon-Knife Project</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Forks</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
+<main>
+  <img src="forkit.gif" id="octocat" alt="Spinning Octocat" />
+  
+  <p>
+    Fork me? Fork you, @octocat! 🎉
+  </p>
+
+  <button id="forkButton">Click to Fork</button>
+</main>
+
+<footer>
+  &copy; 2025 Spoon-Knife Project. All rights reserved.
+</footer>
+
+<script>
+  // JavaScript interactivity
+  const button = document.getElementById('forkButton');
+  button.addEventListener('click', () => {
+    alert('Forked successfully! 🍴');
+  });
+</script>
 
 </body>
 </html>
