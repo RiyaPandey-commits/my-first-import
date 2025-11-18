@@ -1,20 +1,82 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ru">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Spoon-Knife</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8" />
+  <title>График по пользователям</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
+  <h2>Статистика заказов</h2>
+  <canvas id="myChart" width="800" height="400"></canvas>
+  
+  <script>
+    // Данные по датам (можете заменить по своим данным)
+    const labels = [
+      "09.11.2025",
+      "10.11.2025",
+      "11.11.2025",
+      "08.11.2025",
+      "07.11.2025",
+      "06.11.2025",
+      "05.11.2025",
+      "04.11.2025",
+      "03.11.2025",
+      "01.11.2025"
+    ];
 
-<img src="forkit.gif" id="octocat" alt="" />
+    // Количество заказов за каждую дату (примерная сумма заказов)
+    const dataCounts = [3, 5, 7, 3, 4, 6, 4, 4, 3, 2];
 
-<!-- Feel free to change this text here -->
-<p>
-  Fork me? Fork you, @octocat!
-</p>
+    // Общие суммы заказов за каждую дату
+    const dataSums = [10284, 10841, 22144, 11852, 14403, 16935, 8920, 12272, 8538, 10007];
 
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'line', // Тип графика
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Количество заказов',
+            data: dataCounts,
+            borderColor: 'blue',
+            fill: false,
+            yAxisID: 'y'
+          },
+          {
+            label: 'Общая сумма',
+            data: dataSums,
+            borderColor: 'green',
+            fill: false,
+            yAxisID: 'y1'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            type: 'linear',
+            position: 'left',
+            title: {
+              display: true,
+              text: 'Количество заказов'
+            }
+          },
+          y1: {
+            type: 'linear',
+            position: 'right',
+            title: {
+              display: true,
+              text: 'Общая сумма (руб.)'
+            },
+            grid: {
+              drawOnChartArea: false
+            }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
