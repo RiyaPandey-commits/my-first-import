@@ -21,7 +21,6 @@ p {
 #blue {
   color: blue;
 }
-h{
-  display: block;
-  font-weight: bold;
+#title{
+  text-align: center;
 }
